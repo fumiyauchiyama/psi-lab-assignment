@@ -9,15 +9,15 @@ def load_users_from_csv(
         email_col_index: int = 0
         ) -> set[User]:
     """
-    Load users from a CSV file.
-    
-    Args:
-        file_path: The path to the CSV file.
-        role: The role of the users.
-        email_col_index: The index of the column containing the email addresses.
-    
-    Returns:
-        A list of users.
+    CSVファイルからユーザー情報を読み込みます。
+
+    引数:
+        file_path: CSVファイルのパス。
+        role: ユーザーの役割。
+        email_col_index: メールアドレスが格納されている列のインデックス。
+        
+    戻り値:
+        ユーザーの集合。
     """
     with open(file_path, 'r') as file:
         reader = csv.reader(file)
